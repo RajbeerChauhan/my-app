@@ -14,6 +14,17 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/RajbeerChauhan/my-app'
             }
         }
+        stages {
+        stage('Run Docker in Background') {
+            steps {
+                script {
+                    powershell '''
+                    Start-Process "docker" -ArgumentList "run -d your-image-name" -NoNewWindow -Background
+                    '''
+                }
+            }
+        }
+    }
 
         stage('Build Docker Image') {
             steps {
