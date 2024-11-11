@@ -2,7 +2,7 @@ pipeline {
     agent any  // Use any available agent for the pipeline
 
     environment {
-        DOCKER_IMAGE = 'your-dockerhub-username/your-image-name'  // Replace with your Docker Hub username/repository name
+        DOCKER_IMAGE = 'admin/docker-plugin'  // Replace with your Docker Hub username/repository name
         DOCKER_TAG = 'latest'  // Or dynamically set it based on Git commit, build number, etc.
         DOCKER_CREDENTIALS = 'dockerhub-credentials'  // The credentials ID you saved in Jenkins for Docker Hub
     }
@@ -11,7 +11,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Checkout code from GitHub
-                git branch: 'main', url: 'https://github.com/your-username/your-repo.git'
+                git branch: 'main', url: 'https://https://github.com/RajbeerChauhan/my-app.git'
             }
         }
 
