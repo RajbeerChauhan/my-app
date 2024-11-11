@@ -1,1 +1,22 @@
+{
+  "name": "your-app-name",
+  "version": "1.0.0",
+  "description": "A simple Node.js app",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",  // Command to start the app
+    "test": "echo \"Error: no test specified\" && exit 1"  // Placeholder test script
+  },
+  "dependencies": {
+    "express": "^4.17.1"  // Example dependency (add others as needed)
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"  // Optional: useful for local development
+  },
+  "engines": {
+    "node": "14.x"  // Specify the version of Node.js you want to use
+  },
+  "author": "Your Name",
+  "license": "ISC"
+}
 
