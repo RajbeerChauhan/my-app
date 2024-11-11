@@ -11,7 +11,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Checkout code from GitHub
-                git branch: 'main', url: 'https://https://github.com/RajbeerChauhan/my-app'
+                git branch: 'main', url: 'https://github.com/RajbeerChauhan/my-app'
             }
         }
 
