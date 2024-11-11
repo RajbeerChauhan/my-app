@@ -11,7 +11,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Checkout code from GitHub
-                git branch: 'main', url: 'https://https://github.com/RajbeerChauhan/my-app.git'
+                git branch: 'main', url: 'https://https://github.com/RajbeerChauhan/my-app'
             }
         }
 
@@ -28,7 +28,7 @@ pipeline {
             steps {
                 script {
                     // Log in to Docker Hub and push the image
-                    withCredentials([usernamePassword(credentialsId: DOCKER_CREDENTIALS, usernameVariable: 'DOCKER_USERNAME', passwordVariable: 'DOCKER_PASSWORD')]) {
+                    withCredentials([usernamePassword(credentialsId: DOCKER_CREDENTIALS, usernameVariable: 'admin', passwordVariable: 'admin')]) {
                         sh """
                             echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin
                             docker push $DOCKER_IMAGE:$DOCKER_TAG
