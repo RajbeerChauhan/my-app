@@ -14,7 +14,7 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/RajbeerChauhan/my-app'
             }
         }
-        stages {
+        
         stage('Run Docker in Background') {
             steps {
                 script {
@@ -24,7 +24,7 @@ pipeline {
                 }
             }
         }
-    }
+    
 
         stage('Build Docker Image') {
             steps {
