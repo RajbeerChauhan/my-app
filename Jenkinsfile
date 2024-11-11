@@ -15,15 +15,7 @@ pipeline {
             }
         }
         
-        stage('Run Docker in Background') {
-            steps {
-                script {
-                    powershell '''
-                    Start-Process "docker" -ArgumentList "run -d your-image-name" -NoNewWindow -Background
-                    '''
-                }
-            }
-        }
+     
     
 
         stage('Build Docker Image') {
